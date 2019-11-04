@@ -3,3 +3,4 @@
 - MVC: Model - View - Controller
 -  <mvc:annotation-driven /> : delare to use @anotation
 - INTERCEPTER 
+- Sitemesh decorator
