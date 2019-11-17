@@ -6,5 +6,5 @@ import com.laptrinhjavaweb.model.NewModel;
 import com.laptrinhjavaweb.paging.Pageble;
 
 public interface INewDAO extends GenericDAO<NewModel> {
-	List<NewModel> findAll(Pageble pageble);
+	List<NewModel> findAll();
 }

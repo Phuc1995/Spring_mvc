@@ -7,6 +7,6 @@ import com.laptrinhjavaweb.paging.Pageble;
 
 public interface INewService {
 
-	List<NewModel> findAll(Pageble pageble);
+	List<NewModel> findAll();
 
 }

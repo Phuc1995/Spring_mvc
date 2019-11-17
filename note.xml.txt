@@ -4,3 +4,14 @@
 -  <mvc:annotation-driven /> : delare to use @anotation
 - INTERCEPTER 
 - Sitemesh decorator
+
+JDBC
+component-scan base-package="" (folder context)
+- @Service for Service, @Repository for DAO, @Controller for Controller, @Component use to inject for class
+-commit when excute query is success, rollback when had a error
+
+JPA
+-PreparedSatement(Entity Manager): excute query, connection(Entity Manager Factory), 
+-Insert: entityManager.persit, update: entityManager.merge, delete: entityManager.remove,  
+
+
