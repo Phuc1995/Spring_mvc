@@ -1,17 +1,32 @@
--War: deploy on server
--Jar: deploy plug, ultil
+- War: deploy on server
+- Jar: deploy plug, ultil
 - MVC: Model - View - Controller
--  <mvc:annotation-driven /> : delare to use @anotation
+- <mvc:annotation-driven /> : delare to use @anotation
 - INTERCEPTER 
 - Sitemesh decorator
 
 JDBC
 component-scan base-package="" (folder context)
 - @Service for Service, @Repository for DAO, @Controller for Controller, @Component use to inject for class
--commit when excute query is success, rollback when had a error
+- commit when excute query is success, rollback when had a error
 
-JPA
--PreparedSatement(Entity Manager): excute query, connection(Entity Manager Factory), 
--Insert: entityManager.persit, update: entityManager.merge, delete: entityManager.remove,  
+ORM(Object Relational Mapping)
+- is a technology / concept / process of converting data from object-oriented languages to relational databases( Reflection and JDBC)
 
 
+
+JPA(Java Persistence API use Object Relational Mapping)
+- https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repository-query-return-types
+- PreparedSatement(Entity Manager): excute query, connection(Entity Manager Factory), 
+- Insert: entityManager.persit, update: entityManager.merge, delete: entityManager.remove,  
+- @Entity(javax.persistence.Table): mapping with data table in mysql, @Table(name = ""), columnDefinition = "TEXT"
+- @Configuration, @EnableTransactionManagement : config for JPAConfig
+-   EntityManager Factory: open transaction, Driver class, Driver name of mysql
+	+ EntityManager: is interface, query sql as Update, Insert, Delete
+	+ EntityTransaction: open and close connection, manager commit and rollback
+	+ Entity: Entities are objects that represent a table in the database
+	+ Persistence: defines a set of Entity classes managed by an instacne of EntityManager in the application
+	
+Spring Security
+- authentication(user + password): check with database,
+- authorization: decentralization
