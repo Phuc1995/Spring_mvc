@@ -26,7 +26,10 @@ JPA(Java Persistence API use Object Relational Mapping)
 	+ EntityTransaction: open and close connection, manager commit and rollback
 	+ Entity: Entities are objects that represent a table in the database
 	+ Persistence: defines a set of Entity classes managed by an instacne of EntityManager in the application
+- @CreatedDate: auto set time by current time system (@EntityListeners(AuditingEntityListener.class) on BaseEntity)
+	+ JpaAuditingConfig.class(@EnableJpaAuditing(auditorAwareRef = "auditorProvider")) 
 	
 Spring Security
 - authentication(user + password): check with database,
 - authorization: decentralization
+- JPA auditing
