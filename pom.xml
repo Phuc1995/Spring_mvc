@@ -116,8 +116,8 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${spring.data}</version>
 		</dependency>
-		
-				<!-- spring security -->
+
+		<!-- spring security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
@@ -133,7 +133,13 @@
 			<artifactId>spring-security-acl</artifactId>
 			<version>${springsecurity.version}</version>
 		</dependency>
-		
+
+		<!-- spring aspects -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

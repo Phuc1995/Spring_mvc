@@ -28,7 +28,8 @@ JPA(Java Persistence API use Object Relational Mapping)
 	+ Persistence: defines a set of Entity classes managed by an instacne of EntityManager in the application
 - java/reposotory --> _Repository: findOne(return a Object), find(list Object), 
 - dto: data tranfor object
-
+- @ManyToMany(fetch = FetchType.LAZY):
+	+ @ManyToMany(fetch = FetchType.EAGER): load all item of table
 Spring Security
 - authentication(user + password): check with database,
 - authorization: decentralization

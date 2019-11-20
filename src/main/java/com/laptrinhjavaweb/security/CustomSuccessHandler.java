@@ -19,6 +19,14 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 	
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
+	public RedirectStrategy getRedirectStrategy() {
+		return redirectStrategy;
+	}
+
+	public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
+		this.redirectStrategy = redirectStrategy;
+	}
+
 	@Override
 	public void handle(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
 			throws IOException {
