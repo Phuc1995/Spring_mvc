@@ -2,18 +2,17 @@ package com.laptrinhjavaweb.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "new")
-public class NewEntity {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+public class NewEntity extends BaseEntity {
 	
 	@Column(name = "title")
 	private String title;
@@ -26,11 +25,11 @@ public class NewEntity {
 	
 	@Column(name = "content", columnDefinition = "TEXT")
 	private String content;
-
-	public Long getId() {
-		return id;
-	}
-
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private CategoryEntity category;
+	
 	public String getTitle() {
 		return title;
 	}
@@ -61,6 +60,14 @@ public class NewEntity {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public CategoryEntity getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryEntity category) {
+		this.category = category;
 	}
 	
 	
