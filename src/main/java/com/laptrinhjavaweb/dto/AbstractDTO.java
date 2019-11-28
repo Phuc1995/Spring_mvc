@@ -16,6 +16,7 @@ public class AbstractDTO<T> {
 	private Integer page;
 	private Integer maxPageItem;
 	private Integer totalPage;
+	private Integer limit;
 	private Integer totalItem;
 	private String sortName;
 	private String sortBy;
@@ -125,4 +126,11 @@ public class AbstractDTO<T> {
 	public void setType(String type) {
 		this.type = type;
 	}
+	public Integer getLimit() {
+		return limit;
+	}
+	public void setLimit(Integer limit) {
+		this.limit = limit;
+	}
+	
 }

@@ -41,7 +41,12 @@ Spring Security
 - .getPrincipal(): matain data
 - WEB-INF/context/secutity.xml: <intercept-url pattern="/quan-tri/trang-chu" access="hasAnyRole('ADMIN')" />
 
-Restful web service(server side render):	
-- DTO(data tranfer object): recive data from client --> DTO --> controller --> servcie --> repository(data to databse)	
-	+	client --> DTO --> api --> service --> repository		
+Restful web service(server side render):
+- DTO(data tranfer object): recive data from client --> DTO --> controller --> servcie --> repository(data to databse)
+	+	client --> DTO --> api --> service --> repository	
 - @RestController
+
+spring data jpa và restful web service:
+- webapp --> common --> taglib.jsp --> add <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+- @RequestParam(value = "id", required = false
+- 
